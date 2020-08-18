@@ -9,6 +9,7 @@ import { Query } from '@apollo/client/react/components';
 import styles from './styles';
 import { GET_USER } from '../constants';
 import TodoInput from './todoInput';
+import TodoList from './todoList';
 
 const NETWORK_IP = '192.168.43.157';
 
@@ -39,6 +40,7 @@ function App() {
           return (
             <View style={styles.container}>
               <TodoInput />
+              <TodoList user={data.user} />
             </View>
           );
         }}
